@@ -147,3 +147,9 @@ The `xor`-operator will compare two bits in the same position and return results
 The line `PORTB ^= (1 << LED_PIN)` is executed in the following way:
 
 ![Display on how to toggle a bit within a register](./resources/Toggling%20a%20bit.png)
+
+## Run the project
+
+To run this project, you can upload the .hex file to a simulation tool that can simulate the AVR ATMega328p.
+
+Here is a finished template you can use, with a guide on how to upload the file: https://wokwi.com/projects/445516715245466625
