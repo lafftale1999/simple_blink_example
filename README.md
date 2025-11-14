@@ -1,6 +1,7 @@
-# embedded_project_template
-An easy project template for building and flashing firmware onto ATMega328p. Used in the cpp_for_developers course.
+# Learn Bitmanipulation with Embedded Development on AVR
+Working with microcontrollers often means working close to the hardware, so understanding how to control individual bits inside registers is important. This project is designed to teach exactly that. Using the AVR ATmega328p as a practical example, you’ll explore how bitmanipulation works in real embedded development: setting, clearing, and toggling bits to control hardware such as LEDs.
 
+# Files in this folder
 ## main.cpp
 This file contains the entrypoint for our program. Here we find the:
 
@@ -77,6 +78,9 @@ OBJISP="C:\avr\bin\avrdude"
 ## millis
 Courtesy of Zak Kemble - a library to keep track of time in the AVR mcu space.
 
+## led_simple.hex
+This is the executable file which we can flash onto the MCU. If you want to try and run the program - you need to have the pre-requisites prepared first.
+
 # Bitmanipulation
 
 ## Example #1: Setting a bit
@@ -148,8 +152,18 @@ The line `PORTB ^= (1 << LED_PIN)` is executed in the following way:
 
 ![Display on how to toggle a bit within a register](./resources/Toggling%20a%20bit.png)
 
-## Run the project
+# Run the project
+The following steps are needed to run the program:
 
+## Pre-requisites
+To compile this program properly you need the following:
+1. AVR properly installed on your computer. You can find a guide for this here: [AVR install guide](https://github.com/lafftale1999/cpp_for_developers/blob/main/week_5/presentations/2.%20Install%20AVR.pdf)
+2. Visual Studio Code
+3. Visual Studio Code Extension: Makefile Tools
+
+When all of these are in place - navigate to the root of this folder and compile the program using Makefile Tools in VSCode or the `mingw32-make` command in the terminal.
+
+## Run the project
 To run this project, you can upload the .hex file to a simulation tool that can simulate the AVR ATMega328p.
 
 Here is a finished template you can use, with a guide on how to upload the file: https://wokwi.com/projects/445516715245466625
